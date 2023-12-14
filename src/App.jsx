@@ -19,16 +19,16 @@ function App() {
   return (
     <div className="App">
       {puppies.map((puppy) => (
-        <p onClick={() => handleClick(puppy.id)} key={puppy.id}>
+        <p onClick={() => handleClick(puppy.id)} key={puppy.id} style={{backgroundColor: "lightgrey", borderRadius: "0 20px 0 20px", padding:"10px", color:"black"}}>
           {puppy.name}
         </p>
       ))}
       {featPupId && (
         <div>
-          <h2>{featuredPup.name}</h2>
-          <ul>
-            <li>Age: {featuredPup.age}</li>
-            <li>Email: {featuredPup.email}</li>
+          <h2 style={{backgroundColor: "black", borderRadius: "50px 50px 50px 50px", padding:"10px"}}>{featuredPup.name}</h2>
+          <ul> 
+            <li style={{listStyleType: "none"}}>Age: {featuredPup.age}</li>
+            <li style={{listStyleType: "none"}}> Email: {featuredPup.email}</li>
           </ul>
         </div>
       )}
